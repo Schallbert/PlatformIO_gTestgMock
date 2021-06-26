@@ -26,9 +26,27 @@ protected:
 };
 
 //     Test case name    Precondition_action_expectation
+TEST_F(loopInToOut_Test, loop_readsInput)
+{
+    EXPECT_CALL(hal_mock, digitalRead(_)).WillOnce(Return(true));
+
+    m_loopInToOut->loopThrough(1, 2);
+}
+
 TEST_F(loopInToOut_Test, loop_inputHigh_returnsHigh)
 {
     ON_CALL(hal_mock, digitalRead(_)).WillByDefault(Return(true));
 
     ASSERT_TRUE(m_loopInToOut->loopThrough(1, 2));
 }
+
+TEST_F(loopInToOut_Test, loop_inputHigh_writesCorrectOutputHigh)
+{
+    ON_CALL(hal_mock, digitalRead(_)).WillByDefault(Return(true));
+
+    EXPECT_CALL(hal_mock, digitalWrite(2, true));
+
+    m_loopInToOut->loopThrough(1, 2);
+}
+
+// More tests, e.g. low state etc.
