@@ -1,3 +1,5 @@
+#include "Arduino.h"
+
 #include "hal.h"
 
 namespace hardwareAbstraction{

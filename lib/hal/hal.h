@@ -1,8 +1,6 @@
 #ifndef HAL_H
 #define HAL_H
 
-#include "Arduino.h"
-
 #include "hal_if.h"
 
 namespace hardwareAbstraction{
