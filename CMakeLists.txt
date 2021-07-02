@@ -5,7 +5,7 @@ project(unittest)
 include(FetchContent)
 FetchContent_Declare(
   googletest
-  GIT_REPOSITORY https://github.com/Schallbert/PlatformIO_gTestgMock.git
+  GIT_REPOSITORY https://github.com/google/googletest.git
 )
 FetchContent_MakeAvailable(googletest)
 
