@@ -10,7 +10,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 set(CMAKE_CXX_STANDARD 11)
-set(TEST_NAME ${PROJECT_NAME}_loopInToOut)
+set(TEST_NAME /test/desktop${PROJECT_NAME}_loopInToOut)
 add_executable(${TEST_NAME} pio_gtestgmock_test.cpp)
 target_link_libraries(${TEST_NAME} gtest_main)
 

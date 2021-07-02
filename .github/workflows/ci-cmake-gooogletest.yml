@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Configure CMake
-      run: cmake -S $GITHUB_WORKSPACE -B ${{runner.workspace}}/test/desktop
+      run: cmake -S $GITHUB_WORKSPACE -B ${{runner.workspace}}/.pio/build/cmake
 
     - name: Build
       working-directory: ${{runner.workspace}}/.pio/build/cmake
