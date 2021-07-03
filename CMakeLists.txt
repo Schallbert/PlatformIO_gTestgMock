@@ -11,7 +11,7 @@ FetchContent_MakeAvailable(googletest)
 
 set(CMAKE_CXX_STANDARD 11)
 set(TEST_NAME ${PROJECT_NAME}_unittest)
-add_executable(${TEST_NAME} ${PROJECT_NAME}/test/desktop/unittest_loopInToOut.cpp)
+add_executable(${TEST_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/test/desktop/unittest_loopInToOut.cpp)
 target_link_libraries(${TEST_NAME} gtest_main)
 
 enable_testing()
