@@ -13,6 +13,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(TEST_NAME ${PROJECT_NAME}_unittest)
 add_executable(${TEST_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/test/desktop/unittest_loopInToOut.cpp)
 target_link_libraries(${TEST_NAME} gtest_main)
+target_link_libraries(${TEST_NAME} gmock_main)
 
 enable_testing()
 include(GoogleTest)
