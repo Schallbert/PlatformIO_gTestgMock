@@ -9,9 +9,12 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+set(TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/test/desktop)
+
 set(CMAKE_CXX_STANDARD 11)
 set(TEST_NAME ${PROJECT_NAME}_unittest)
-add_executable(${TEST_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/test/desktop/unittest_loopInToOut.cpp)
+add_executable(${TEST_NAME} ${TEST_DIR}/unittest_loopInToOut.cpp)
 target_link_libraries(${TEST_NAME} gtest_main)
 target_link_libraries(${TEST_NAME} gmock_main)
 

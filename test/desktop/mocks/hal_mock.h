@@ -3,7 +3,7 @@
 
 #include "gmock/gmock.h"
 
-#include "../lib/hal_if/hal_if.h"
+#include "hal_if.h"
 
 class Hal_mock : public hardwareAbstraction::Hal_IF
 {
