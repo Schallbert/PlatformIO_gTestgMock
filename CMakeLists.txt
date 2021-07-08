@@ -9,7 +9,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-target_include_directories(/lib)
+include_directories(/lib)
 set(TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/test/desktop)
 
 set(CMAKE_CXX_STANDARD 11)
